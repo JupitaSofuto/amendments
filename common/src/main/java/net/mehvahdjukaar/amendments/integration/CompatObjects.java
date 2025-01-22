@@ -25,6 +25,8 @@ public class CompatObjects {
 
     public static final Supplier<Item> CAKE_SLICE = make("farmersdelight:cake_slice", BuiltInRegistries.ITEM);
     public static final Supplier<Item> SOUL_CANDLE_HOLDER = make("supplementaries:candle_holder_soul", BuiltInRegistries.ITEM);
+    public static final Supplier<Item> ENDER_CANDLE_HOLDER = make("supplementaries:candle_holder_ender", BuiltInRegistries.ITEM);
+    public static final Supplier<Item> CUPRIC_CANDLE_HOLDER = make("supplementaries:candle_holder_cupric", BuiltInRegistries.ITEM);
 
     public static final Supplier<Item> SCONCE_LEVER = make("supplementaries:sconce_lever", BuiltInRegistries.ITEM);
     public static final Supplier<Item> SCONCE = make("supplementaries:sconce", BuiltInRegistries.ITEM);
