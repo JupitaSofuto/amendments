@@ -104,6 +104,10 @@ allprojects {
 
     repositories {
 
+        maven {
+            url file('../libs')
+        }
+
         flatDir {
             dirs 'mods'
         }

@@ -1,0 +1,103 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "net.mehvahdjukaar",
+    "module": "moonlight",
+    "version": "1.20-2.13.43",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "moonlight-1.20-2.13.43.jar",
+          "url": "moonlight-1.20-2.13.43.jar",
+          "size": 852222,
+          "sha512": "9d59f30bca6e6b35fe851e3def6f5700a88cadad7322d11b6472850ca8179136deec0c324f2cb1ec3f94c44f83771d61e1e67d06d05d6c63dcd087662f85f12d",
+          "sha256": "4957f9c22fa75978ffbbe30ec7b52515f6ef626dea1a982bc39e2e61cce3d35d",
+          "sha1": "917ec630f8faab1e181418d253a9bc5cec790d51",
+          "md5": "351a31b3faeea924585443901564f108"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.github.llamalad7",
+          "module": "mixinextras-fabric",
+          "version": {
+            "requires": "0.3.6"
+          }
+        },
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.15.10"
+          }
+        },
+        {
+          "group": "curse.maven",
+          "module": "configured-457570",
+          "version": {
+            "requires": "5096828"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "moonlight-1.20-2.13.43.jar",
+          "url": "moonlight-1.20-2.13.43.jar",
+          "size": 852222,
+          "sha512": "9d59f30bca6e6b35fe851e3def6f5700a88cadad7322d11b6472850ca8179136deec0c324f2cb1ec3f94c44f83771d61e1e67d06d05d6c63dcd087662f85f12d",
+          "sha256": "4957f9c22fa75978ffbbe30ec7b52515f6ef626dea1a982bc39e2e61cce3d35d",
+          "sha1": "917ec630f8faab1e181418d253a9bc5cec790d51",
+          "md5": "351a31b3faeea924585443901564f108"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "moonlight-1.20-2.13.43-sources.jar",
+          "url": "moonlight-1.20-2.13.43-sources.jar",
+          "size": 462302,
+          "sha512": "fbeff238be97fd6d6f06e8cbe287b836416909d22a20481934ca5691951cdba4f9a07b80ab8f1f1714f147c38eff05ea2dba803f4945375fba62590aaf52749d",
+          "sha256": "f77228cdb604050b100761c9e260b6785dead00987cc0a0fc68d78c8ed617f16",
+          "sha1": "fda266ee9ef798348232c96bc92f2dbc156f6d13",
+          "md5": "55dbf9cc2c90a496958dc7e11fc5ee95"
+        }
+      ]
+    }
+  ]
+}
