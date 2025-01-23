@@ -103,47 +103,9 @@ public class CandleHolderRendererExtension implements IThirdPersonAnimationProvi
 
     private static void renderFlame(LivingEntity entity, PoseStack poseStack, MultiBufferSource bufferSource, ItemStack stack) {
         boolean soul = stack.getItem() == CompatObjects.SOUL_CANDLE_HOLDER.get();
-        var builder = bufferSource.getBuffer(RenderType.text(soul ? FLAME_SOUL : FLAME));
-
-        int lu = LightTexture.FULL_BRIGHT & '\uffff';
-        int lv = LightTexture.FULL_BRIGHT >> 16 & '\uffff';
-
-        float period = 20;
-        float t = ((entity.tickCount + Minecraft.getInstance().getFrameTime()) % period) / period;
-        float ss = (1.0F - t * t * 0.4F);
-
-        float scale = ss * 2 / 16f;
-
-        poseStack.translate(0, 3 / 16f, 0);
-        poseStack.last().pose().setRotationXYZ(0,0,0);
-        poseStack.scale(-scale, scale, -scale);
-
-        VertexUtil.addQuad(builder, poseStack, -0.5f, -0.5f, 0.5f, 0.5f, lu, lv);
-    }
-
-    private static void renderFlame(LivingEntity entity, PoseStack poseStack, MultiBufferSource bufferSource, ItemStack stack) {
-        boolean soul = stack.getItem() == CompatObjects.ENDER_CANDLE_HOLDER.get();
-        var builder = bufferSource.getBuffer(RenderType.text(ender ? FLAME_ENDER : FLAME));
-
-        int lu = LightTexture.FULL_BRIGHT & '\uffff';
-        int lv = LightTexture.FULL_BRIGHT >> 16 & '\uffff';
-
-        float period = 20;
-        float t = ((entity.tickCount + Minecraft.getInstance().getFrameTime()) % period) / period;
-        float ss = (1.0F - t * t * 0.4F);
-
-        float scale = ss * 2 / 16f;
-
-        poseStack.translate(0, 3 / 16f, 0);
-        poseStack.last().pose().setRotationXYZ(0,0,0);
-        poseStack.scale(-scale, scale, -scale);
-
-        VertexUtil.addQuad(builder, poseStack, -0.5f, -0.5f, 0.5f, 0.5f, lu, lv);
-    }
-
-    private static void renderFlame(LivingEntity entity, PoseStack poseStack, MultiBufferSource bufferSource, ItemStack stack) {
-        boolean soul = stack.getItem() == CompatObjects.CUPRIC_CANDLE_HOLDER.get();
-        var builder = bufferSource.getBuffer(RenderType.text(cupric ? FLAME_CUPRIC : FLAME));
+        boolean ender = stack.getItem() == CompatObjects.ENDER_CANDLE_HOLDER.get();
+        boolean cupric = stack.getItem() == CompatObjects.CUPRIC_CANDLE_HOLDER.get();
+        var builder = bufferSource.getBuffer(RenderType.text(soul ? ender ? cupric ? FLAME_SOUL : FLAME : FLAME_ENDER : FLAME_CUPRIC));
 
         int lu = LightTexture.FULL_BRIGHT & '\uffff';
         int lv = LightTexture.FULL_BRIGHT >> 16 & '\uffff';
